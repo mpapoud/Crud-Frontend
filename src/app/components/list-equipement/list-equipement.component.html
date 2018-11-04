@@ -17,9 +17,9 @@
       <td>{{equipement.id_util}}</td>
       <td>{{equipement.associe}}</td>
       <td><button class="btn btn-danger" (click)="deleteEquipement(equipement)" >Delete</button>
-      <button class="btn btn-primary">Update</button></td>
+      <button class="btn btn-primary" (click)="updateEquipement(equipement)">Update</button></td>
     </tr>
   </tbody>
 </table>
-<button class="btn btn-primary">New Equipement</button>
+<button class="btn btn-primary" (click)="newEquipement()">New Equipement</button>
 </div>

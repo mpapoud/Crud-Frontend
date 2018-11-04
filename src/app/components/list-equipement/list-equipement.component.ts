@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {EquipementService} from '../../shared_service/equipement.service';
 import {Equipement} from '../../equipement';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-list-equipement',
   templateUrl: './list-equipement.component.html',
@@ -8,7 +9,7 @@ import {Equipement} from '../../equipement';
 })
 export class ListEquipementComponent implements OnInit {
 private equipements:Equipement[];
-  constructor(private _equipementService:EquipementService) { }
+  constructor(private _equipementService:EquipementService,private _router:Router) { }
 
   ngOnInit() {
     this._equipementService.getEquipement().subscribe((equipements)=>{
@@ -26,6 +27,18 @@ private equipements:Equipement[];
         console.log(error);
       });
 
+  }
+
+  updateEquipement(equipement)
+  {
+    this._equipementService.setter(equipement);
+    this._router.navigate(['/op']);
+  }
+  newEquipement()
+  {
+    let equipement=new Equipement();
+    this._equipementService.setter(equipement);
+    this._router.navigate(['/op']);
   }
 
 }
