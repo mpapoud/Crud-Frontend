@@ -13,6 +13,7 @@ export class EquipementService {
 private baseUrl:string="http://localhost:8080/demo";
 private headers=new Headers({'Content-Type':'application/json'});
 private options=new RequestOptions({headers:this.headers});
+private equipement:Equipement;
   constructor(private _http:Http) { }
 
   getEquipement()
@@ -44,5 +45,13 @@ private options=new RequestOptions({headers:this.headers});
   errorHandler(error:Response)
   {
      return Observable.throw(error||"SERVER ERROR");
+  }
+  setter(equipement:Equipement)
+  {
+    this.equipement=equipement;
+  }
+  getter()
+  {
+    return this.equipement;
   }
 }
