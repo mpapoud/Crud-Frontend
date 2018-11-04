@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <th>Id</th>
+    <th>Module</th>
+    <th>N° Serie</th>
+    <th>Type</th>
+    <th>Id User</th>
+    <th>Associe</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let equipement of equipements">
+      <td>{{equipement.id}}</td>
+      <td>{{equipement.model}}</td>
+      <td>{{equipement.numSerie}}</td>
+      <td>{{equipement.type}}</td>
+      <td>{{equipement.id_util}}</td>
+      <td>{{equipement.associe}}</td>
+    </tr>
+  </tbody>
+</table>
+
