@@ -16,7 +16,16 @@ private equipements:Equipement[];
         this.equipements=equipements;
     },(error)=>{
       console.log(error);
-    })
+    });
+  }
+  deleteEquipement(equipement)
+  {
+      this._equipementService.deleteEquip(equipement.id).subscribe((data)=>{
+        this.equipements.splice(this.equipements.indexOf(equipement),1);
+      },(error)=>{
+        console.log(error);
+      });
+
   }
 
 }

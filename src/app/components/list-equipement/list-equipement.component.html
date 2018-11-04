@@ -1,4 +1,5 @@
-<table>
+<div class="container">
+<table class="table table-striped">
   <thead>
     <th>Id</th>
     <th>Module</th>
@@ -15,7 +16,10 @@
       <td>{{equipement.type}}</td>
       <td>{{equipement.id_util}}</td>
       <td>{{equipement.associe}}</td>
+      <td><button class="btn btn-danger" (click)="deleteEquipement(equipement)" >Delete</button>
+      <button class="btn btn-primary">Update</button></td>
     </tr>
   </tbody>
 </table>
-
+<button class="btn btn-primary">New Equipement</button>
+</div>
