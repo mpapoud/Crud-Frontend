@@ -8,9 +8,13 @@ import { ListEquipementComponent } from './components/list-equipement/list-equip
 import { FormEquipementComponent } from './components/form-equipement/form-equipement.component';
 import {EquipementService} from './shared_service/equipement.service';
 import {FormsModule} from '@angular/forms';
+import { RegisterUserComponent } from './components/register-user/register-user.component';
+import { LoginUserComponent } from './components/login-user/login-user.component';
+import { IndexComponent } from './components/index/index.component';
 const appRoutes:Routes=[
   {path:'',component:ListEquipementComponent},
-  {path:'op',component:FormEquipementComponent}
+  {path:'op',component:FormEquipementComponent},
+  {path:'enregistrer',component:RegisterUserComponent}
 
 ];
 
@@ -18,7 +22,10 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     ListEquipementComponent,
-    FormEquipementComponent
+    FormEquipementComponent,
+    RegisterUserComponent,
+    LoginUserComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,

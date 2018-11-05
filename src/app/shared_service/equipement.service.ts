@@ -10,7 +10,7 @@ import {Equipement} from '../equipement';
   providedIn: 'root'
 })
 export class EquipementService {
-private baseUrl:string="http://localhost:8080/demo";
+private baseUrl:string="http://localhost:8080/gestionequip";
 private headers=new Headers({'Content-Type':'application/json'});
 private options=new RequestOptions({headers:this.headers});
 private equipement:Equipement;
